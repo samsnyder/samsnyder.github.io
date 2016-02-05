@@ -1,0 +1,102 @@
+<div>
+
+  <style>
+    .weatherday:nth-child(even) {
+    background-color: rgba(0,0,0,0.05);
+    }
+
+    .weatherday:nth-child(odd){
+    background-color: rgba(0,0,0,0.1);
+    }
+
+    .daytext{
+    font-size: 10px;
+    }
+
+    .dayimage{
+    width: 50%;
+    height: auto;
+    }
+
+    .dayday{
+    font-size: 15px;
+    }
+
+    .topsection{
+    //background-color: #7C7C7B;
+    //color: #EAEAEA;
+    padding: 10px;
+    }
+
+    .city{
+    font-size: 20px;
+    }
+
+    .weatherdate{
+    font-size: 12px;
+    }
+
+    .temp{
+    font-size: 30px;
+    }
+
+    .tempunit{
+    font-size: 15px;
+    }
+
+  </style>
+
+
+  <div class="card no-margin no-padding">
+
+    <div class="topsection">
+      <div class="text-center city">
+        {{item.data.location.city}}
+      </div>
+
+      <div class="text-center weatherdate">
+        {{item.data.lastBuildDate}}
+      </div>
+
+      <div class="row row-center">
+        <div class="col text-center">
+          <span class="temp">{{item.data.item.condition.temp}}</span>
+          <span class="tempunit">&deg;{{item.data.units.temperature}}</span>
+        </div>
+
+        <div class="col text-center">
+          <img src="img/weather/{{item.data.item.condition.code}}.gif" class="weathermainimage"/>
+        </div>
+
+        <div class="col text-center">
+          <span class="temp">{{item.data.wind.speed}}</span>
+          <span class="tempunit">{{item.data.units.speed}}</span>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="row no-padding">
+        <div class="col weatherday" ng-repeat="day in item.data.item.forecast">
+          <div class="text-center dayday">
+            {{day.day}}
+          </div>
+
+          <div class="text-center">
+            <img src="img/weather/{{day.code}}.gif" class="dayimage"/>
+          </div>
+
+          <div class="text-center wrap-word daytext">
+            {{day.text}}
+          </div>
+
+
+        </div>
+
+      </div>
+  </div>
+
+
+  
+
+</div>

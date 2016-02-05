@@ -1,0 +1,113 @@
+/* Empty. Add your own CSS if you like */
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.wrap-word {
+    white-space: normal !important;
+}
+
+* {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+input,
+textarea,
+[contenteditable] {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+#mainFooter{
+    height: 54px;
+    background-color: #3B7AC9;
+}
+
+#mainFooter .row{
+    max-width: 500px;
+    margin: auto;
+}
+
+#mainList .list {
+    max-width: 500px;
+    margin: auto;
+}
+
+.footerButSide{
+    color: #ADB9EC !important;
+}
+
+.footerButMain{
+    color: white !important;
+}
+
+#mainContent{
+    bottom: 54px;
+}
+
+.mainText{
+    font-size: 1.1em;
+}
+
+.buttonSubVal{
+    font-size: 0.7em;
+    line-height: normal;
+    padding-bottom: 15px;
+}
+
+/* Mic Classes */
+
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.mictalking{
+    -webkit-animation: pulsate 0.6s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+/* Main view */
+
+.ng-enter {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.ng-enter-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* .ng-leave { */
+/*     -webkit-transition: 0.4s; */
+/*     transition: 0.4s; */
+    
+/* } */
+
+/* .ng-leave-active { */
+/*     height: 0px; */
+/* } */
+
+.item{
+    background-color: inherit !important;
+}

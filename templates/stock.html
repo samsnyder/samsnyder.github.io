@@ -1,0 +1,98 @@
+<div>
+
+  <style>
+    .sprice{
+    font-size: 1.7em;
+    }
+
+    .scurr{
+    font-size: 0.8em;
+    }
+
+    .sname{
+    font-size: 1em;
+    margin-bottom: 2px;
+    }
+
+    .schange{
+    font-size: 1em;
+    }
+
+    .sdirdown{
+    color: red;
+    }
+
+    .sdirup{
+    color: green;
+    }
+
+    .sdirflat{
+    color: black;
+    }
+
+    .schangecurr{
+    font-size: 0.6em;
+    padding-left: 2px;
+    }
+
+    .schangepur{
+    padding-right: 5px;
+    }
+
+    .syahoo{
+    font-size: 0.6em;
+    }
+
+    .sstockleft{
+    padding-left: 10px;
+    float: left;
+    }
+
+    .sstockright{
+    float:right;
+    padding-right: 5px;
+    }
+  </style>
+
+  <div class="card no-margin">
+    <div ng-show="!item.data.length">
+      <div class="row">
+        <div class="col">
+          No Results
+        </div>
+      </div>
+    </div>
+    <div ng-show="item.data.length" ng-repeat="stock in item.data">
+      <div class="row">
+        <div class="col sname wrap-word">
+          {{stock.Name}}
+        </div>
+        <div class="col ssymbol text-right">
+          {{stock.Symbol}}
+        </div>
+      </div>
+      <div>
+        <div class="sstockleft">
+          <span class="sprice">{{stock.LastTradePriceOnly}}</span>
+          <span class="scurr">{{stock.Currency}}</span>
+        </div>
+        <div class="sstockright text-right">
+          <span class="schange schangepur sdir{{stock.changeDir}}">
+
+            {{stock.Change}}<span class="schangecurr">{{stock.Currency}}</span>
+
+            ({{stock.ChangeinPercent}})
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-right syahoo">
+        powered by Yahoo
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
