@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "uk.co.samsnyder.loopytunes",
+    "sha256_cert_fingerprints":
+    ["1B:B5:F9:47:8B:3E:6E:42:88:80:1F:56:B5:2B:D8:1E:56:FB:7B:2B:BE:00:CC:DD:64:47:FC:81:0D:EB:DB:31"]
+  }
+}]
